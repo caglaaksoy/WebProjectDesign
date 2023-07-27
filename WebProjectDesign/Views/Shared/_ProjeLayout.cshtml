@@ -1,0 +1,57 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/4.7.0/css/font-awesome.min.css">
+    <title>_ProjeLayout</title>
+</head>
+<body>
+    <!--HEADER start-->
+    <header class="header" id="header">
+        <a href="/Proje/Index">
+            <img class="logo" src="~/resimler/5-removebg-preview2.png" alt="logo" />
+        </a>
+        <a href="~/Login/Index">
+            <p class="fa-light fa-right-to-bracket button"
+               id="login-button"> Giriş Yap</p>
+        </a>
+    </header>
+    <!--HEADER end-->
+    <div>
+        @RenderBody()
+    </div>
+    <!--FOOTER START-->
+    <footer>
+        <div class="footer">
+            <div class="footer-item-buttons">
+                <a href="https://www.instagram.com/kedilerinhastasiyim/">
+                    <i class="bi bi-instagram"> Instagram</i>
+                </a>
+                <a href="https://twitter.com/kedicidergisi">
+                    <i class="bi bi-twitter"> Twitter</i>
+                </a>
+                <a href="https://www.facebook.com/kedicidergisi/">
+                    <i class="bi bi-facebook"> Facebook</i>
+                </a>
+                <a href="https://tr.pinterest.com/afs61/kedi/">
+                    <i class="bi bi-pinterest"> Pinterest</i>
+                </a>
+            </div>
+        </div>
+        <div class="reserved">
+            <a href="#">
+                <p class="bi bi-c-circle">
+                    2023 by Cagla Studio. All Rights
+                    Reserved
+                </p>
+            </a>
+        </div>
+    </footer>
+    <!--FOOTER END-->
+</body>
+</html>

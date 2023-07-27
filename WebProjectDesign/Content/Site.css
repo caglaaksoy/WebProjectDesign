@@ -1,0 +1,420 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;60 0&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+:root {
+    --main-color: rgba(0,0,0,0.9);
+    --header-color: #ffffff;
+}
+
+html {
+    overflow-x: hidden; /*yataydaki scrollu kapadım*/
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.2s ease; /*tıkladığımızda dah ayavaş geçmesi için*/
+}
+
+body {
+    background-color: var(--main-color);
+}
+/*HEADER START*/
+header .logo {
+    width: 260px;
+    height: 84px;
+    background-size: cover;
+    background-position: center;
+    margin-left: 40%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.75); /*box-shadow generator*/
+    position: sticky; /* top 0 verince header scrollu kaydırınca tepede kalıyor*/
+    top: 0;
+    z-index: 1000;
+}
+
+    .header .button {
+        margin-right: 10px;
+        border-radius: 1rem;
+        text-decoration: none;
+        color: #ffffff;
+        margin-left: 0;
+        background-color: #ff6a00;
+        padding: 7px;
+        border-right-width: 1px;
+        border-left-width: 1px;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        margin-right: 60px;
+    }
+/*HEADER END*/
+/*HOME START*/
+.home {
+    min-height: 100vh;
+    background-image: url('../resimler/pexels-cats-coming-1543793.jpg');
+    no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -120px;
+    display: flex;
+    align-items: center;
+    padding: 35px 7%;
+}
+
+    .home .content {
+        max-width: 600px;
+        max-width: 600px;
+    }
+
+        .home .content h3 {
+            font-size: 60px;
+            color: #ffffff;
+        }
+
+        .home .content p {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 1.8; /*satır arası boşluk*/
+            padding: 10px 0;
+            color: #ffffff;
+        }
+/*HOME END*/
+.container {
+    background-color: var(--main-color);
+}
+/*LİST START*/
+cat-list-container {
+    margin-left: 70px;
+}
+
+.cat-list {
+    list-style: none;
+    padding: 0;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    column-gap: 30px; /*aralarını açmak için*/
+    transform: translateX(0);
+    transition: 1s all ease-in-out;
+}
+
+.cat-list-container p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.8; /*satır arası boşluk*/
+    padding: 10px 7%;
+    color: #ffffff;
+}
+
+.cat-list-container h1,
+.cat-list-container h3 {
+    color: #ffffff;
+    padding: 10px 7%;
+}
+
+.cat-list-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.cat-item {
+    position: relative;
+}
+
+    .cat-item:hover .cat-item-title {
+        opacity: 1;
+    }
+
+    .cat-item:hover .cat-item-img {
+        transform: scale(1.2);
+        margin: 0 30px;
+        opacity: 0.5;
+    }
+
+.cat-item-img {
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    transition: 1s all ease-in-out;
+}
+
+.cat-item-title {
+    background-color: rgb(40,40,40,0.4);
+    padding: 0 10px;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.arrow {
+    cursor: pointer;
+    width: 100px;
+    display: flex;
+    font-size: 120px;
+    position: absolute;
+    right: 0;
+    top: 100px;
+    opacity: .5;
+    color: #ffffff;
+    transition: .5s ease all;
+}
+
+    .arrow:hover {
+        opacity: 1;
+    }
+/*LİST END*/
+.gecis {
+    width: 100%;
+    height: 100vh;
+    background: url("../resimler/pexels-beyzaa-yurtkuran-16259037.jpg") no-repeat center;
+    background-size: cover;
+    background-position: center;
+}
+/*CONTACT START*/
+.contactcontainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    padding: 20px 100px;
+}
+
+    .contactcontainer:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url("/resimler/pexels-marcelo-verfe-14513839.jpg") no-repeat center;
+        background-size: cover;
+        z-index: -1;
+        backdrop-filter: blur(%50px);
+    }
+
+.contact-box {
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 19px 5px rgb(255 106 0);
+}
+
+.left {
+    height: 100%;
+    background: url("/resimler/pexels-marcelo-verfe-14513839.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.right {
+    padding: 25px 40px;
+}
+
+.contact .h2 {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.field {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: rgba(230,230,230,0.6);
+    outline: none;
+    border: 2px solid rgba(0,0,0,0);
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+
+    .field:focus {
+        background-color: #ffffff;
+        border: 2px solid rgb(255 106 0);
+    }
+
+.area {
+    min-height: 150px;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    background-color: #ff6a00;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    transition: .3s;
+}
+
+    .btn:hover {
+        background-color: orangered;
+    }
+
+@media screen and (max-width:880px) {
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        height: 200px;
+    }
+}
+/*CONTACT END*/
+/*FOOTER START*/
+.footer {
+    height: 80px;
+    width: 100%;
+    background-color: #ff6a00;
+}
+
+.footer-item-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 7%;
+    font-style: normal;
+    cursor: pointer;
+}
+
+.reserved {
+    background-color: #ff6a00;
+    display: block;
+    font-style: normal;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+}
+/*FOOTER END*/
+/*LOGİN START*/
+.login {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    padding: 20px 100px;
+}
+
+    .login:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        z-index: -1;
+        backdrop-filter: blur(%50px);
+    }
+
+.login-box {
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 19px 5px rgb(255 106 0);
+}
+
+.loginphoto {
+    background: url("/resimler/catlogin.jpg") no-repeat center;
+    display: inline-block;
+    height: 100%;
+    background-size: cover;
+}
+
+.logintext {
+    padding: 25px 40px;
+    display: inline-block;
+}
+
+.login .h2 {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.fieldlogin {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: rgba(230,230,230,0.6);
+    outline: none;
+    border: 2px solid rgba(0,0,0,0);
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+
+    .fieldlogin input {
+        background-color: rgba(230,230,230,0.6);
+    }
+
+    .fieldlogin:focus {
+        background-color: #ffffff;
+        border: 2px solid rgba(230,230,230,0.6);
+    }
+
+.btnlogin {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    background-color: #ff6a00;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: transparent;
+    transition: .3s;
+}
+
+    .btnlogin input {
+        background-color: #ff6a00;
+    }
+
+        .btnlogin input:hover {
+            background-color: orangered;
+        }
+
+    .btnlogin:hover {
+        background-color: orangered;
+    }
+
+@media screen and (max-width:880px) {
+    .login-box {
+        grid-template-columns: 1fr;
+    }
+
+    .loginphoto {
+        height: 200px;
+    }
+}
+/*LOGİN END*/

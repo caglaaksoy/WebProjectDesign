@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ProjeLayout.cshtml";
+}
+<div class="login">
+    <div class="login-box">
+        <div class="loginphoto"></div>
+        <div class="logintext">
+            <h2>Giriş yap</h2>
+            <br />
+            <form method="post" asp-controller="Login" asp-action="Index">
+                <p class="fieldlogin">
+                    <input type="text" name="username" value=""
+                           placeholder="E-mail" required>
+                </p>
+                <p class="fieldlogin">
+                    <input type="password" name="password"
+                           value="" placeholder="Şifre" required>
+                </p>
+                <p class="btnlogin">
+                    <input type="submit" name="commit"
+                           value="Giriş Yap">
+                </p>
+                @ViewBag.Mesaj
+            </form>
+        </div>
+    </div>
+</div>
